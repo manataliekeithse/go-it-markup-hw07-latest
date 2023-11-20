@@ -108,6 +108,7 @@ header .logo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding-left: 40px;
 }
 .active::after {
   content: " ";
@@ -672,6 +673,10 @@ footer {
   gap: 30px;
 }
 
+.customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .customer-icon {
   list-style: none;
   text-decoration: none;
@@ -948,6 +953,9 @@ project-option:hover,
     text-align: center;
   }
 
+  .mobile-nav {
+    display: none;
+  }
   .what-we-do {
     display: none;
   }
