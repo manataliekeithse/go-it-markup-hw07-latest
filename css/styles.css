@@ -656,7 +656,6 @@ footer {
   color: #f4f4fd;
   padding-top: 80px;
   padding-bottom: 80px;
-  text-align: center;
 }
 .footer-inner {
   display: flex;
@@ -754,7 +753,6 @@ footer {
 /* portfolio styling */
 
 .projects ul {
-  width: 100%;
   flex-wrap: wrap;
   list-style-type: none;
   text-decoration: none;
@@ -808,12 +806,9 @@ footer {
   border-radius: 4px;
   border: 1px solid var(--CORNFLOWER, #e7e9fc);
   background: var(--CLOUD, #f4f4fd);
-  position: relative;
-  left: 500px;
 }
 
-,
-project-option:hover,
+.project-option:hover,
 .project-option:focus {
   border: 1px solid var(--IRIS);
 }
@@ -832,7 +827,7 @@ project-option:hover,
   display: flex;
   position: relative;
   left: 600px;
-  top: -10px;
+  top: -20px;
 }
 
 .portfolio-nav {
@@ -864,19 +859,30 @@ project-option:hover,
   .container {
     width: 428px;
   }
+
+  .mobile-nav {
+    display: flex;
+  }
 }
 
 @media (max-width: 428px) {
   .footer-inner {
     justify-content: center;
   }
-}
 
-@media (min-width: 768px) {
-  .mobile-nav {
+  .header.container.d-flex.header {
     display: none;
   }
 
+  .portfolio-btn {
+    flex-wrap: wrap;
+  }
+  .values-icons {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
   .js-close-menu {
     display: none;
   }
@@ -887,7 +893,9 @@ project-option:hover,
   .team-item {
     flex-basis: calc(100% / 2 - 30px);
   }
-
+  .values-icons {
+    display: none;
+  }
   .customer-icon {
     flex-basis: calc(100% / 3 - 30px);
   }
@@ -902,6 +910,24 @@ project-option:hover,
   .input-sub {
     width: 264px;
     margin-right: 24px;
+  }
+
+  .what-we-do {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .portfolio-contacts {
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  .main-portfolio-nav {
+    text-align: center;
+    margin-top: 13px;
   }
 }
 
@@ -921,6 +947,19 @@ project-option:hover,
   .customer-icon {
     flex-basis: calc(100% / 6 - 30px);
   }
+  .values-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .what-we-do {
+    display: flex;
+  }
+  .portfolio-btn {
+    position: relative;
+    left: 500px;
+  }
 }
 @media (max-width: 767px) {
   .what-we-do {
@@ -932,17 +971,12 @@ project-option:hover,
   .about-item h3 {
     font-size: 36px;
   }
-  .values-icons {
-    display: none;
-  }
+
   .about-item p {
     margin-top: 0;
   }
 }
 @media (max-width: 767px) {
-  .desktop-nav {
-    display: none;
-  }
   footer .logo {
     text-align: center;
     margin-right: 0;
@@ -953,9 +987,6 @@ project-option:hover,
     text-align: center;
   }
 
-  .mobile-nav {
-    display: none;
-  }
   .what-we-do {
     display: none;
   }
@@ -991,5 +1022,25 @@ project-option:hover,
     font-size: 36px;
     letter-spacing: 0.72px;
     line-height: 1.11px;
+  }
+}
+@media (min-width: 767px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .portfolio-btn {
+    padding-top: 32px;
+  }
+  .project-option {
+    gap: 30px;
+    margin-left: 10px;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    top: 10px;
   }
 }
