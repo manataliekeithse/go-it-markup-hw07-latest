@@ -271,7 +271,9 @@ h1 {
   left: 23px;
   opacity: 0;
 }
-
+.agree-text {
+  font-size: 12px;
+}
 .service-agree {
   display: flex;
   align-items: center;
@@ -659,7 +661,6 @@ footer {
 }
 .footer-inner {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   row-gap: 72px;
 }
@@ -856,16 +857,22 @@ footer {
 /* CSS MEDIA QUERY */
 
 @media (min-width: 428px) {
+  .desktop-nav {
+    display: none;
+  }
   .container {
     width: 428px;
   }
-
   .mobile-nav {
-    display: flex;
+    display: block;
+    padding-top: 25.5px;
+    padding-bottom: 23.5px;
+    border: 1px solid var(--CORNFLOWER, #e7e9fc);
+    background: var(--WHITE, #fff);
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 2px 1px 0px rgba(46, 47, 66, 0.08);
   }
-}
-
-@media (max-width: 428px) {
   .footer-inner {
     justify-content: center;
   }
@@ -876,13 +883,35 @@ footer {
 
   .portfolio-btn {
     flex-wrap: wrap;
+    gap: 24px;
   }
+
   .values-icons {
+    display: none;
+  }
+  .about-item h3 {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: 0.72px;
+  }
+  .projects {
+    padding-top: 30px;
+  }
+
+  .what-we-do {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
+  h1 {
+    font-size: 56px;
+    letter-spacing: 1.12px;
+    line-height: 60px;
+  }
   .js-close-menu {
     display: none;
   }
@@ -904,9 +933,6 @@ footer {
     justify-content: space-between;
   }
 
-  .footer {
-    text-align: center;
-  }
   .input-sub {
     width: 264px;
     margin-right: 24px;
@@ -922,16 +948,58 @@ footer {
 
   .portfolio-contacts {
     display: block;
-    flex-wrap: wrap;
   }
 
   .main-portfolio-nav {
     text-align: center;
     margin-top: 13px;
   }
+
+  footer .logo {
+    margin-right: 0;
+    display: block;
+  }
+
+  .what-we-do {
+    display: none;
+  }
+
+  .btn-sub {
+    margin-top: 24px;
+  }
+
+  .mobile-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu {
+    display: block;
+    height: 100vh;
+    width: 100vh;
+    position: fixed;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+  }
+
+  .header.container.d-flex.header {
+    display: inline-flex;
+  }
+
+  .portfolio-btn {
+    text-align: center;
+  }
+
+  .about-item h3 {
+    font-size: 36px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .mobile-menu {
+    display: none;
+  }
+
   .desktop-contacts {
     display: flex;
     column-gap: 30px;
@@ -956,81 +1024,7 @@ footer {
   .what-we-do {
     display: flex;
   }
-  .portfolio-btn {
-    position: relative;
-    left: 500px;
-  }
-}
-@media (max-width: 767px) {
-  .what-we-do {
-    display: none;
-  }
-  .footer-inner {
-    justify-content: center;
-  }
-  .about-item h3 {
-    font-size: 36px;
-  }
 
-  .about-item p {
-    margin-top: 0;
-  }
-}
-@media (max-width: 767px) {
-  footer .logo {
-    text-align: center;
-    margin-right: 0;
-    display: block;
-  }
-  p.socialmedia,
-  p.footer-subscribe-text {
-    text-align: center;
-  }
-
-  .what-we-do {
-    display: none;
-  }
-
-  .footer-sub {
-    text-align: center;
-  }
-  .btn-sub {
-    margin-top: 24px;
-  }
-
-  .mobile-menu.is-open {
-    transform: translateX(0);
-  }
-
-  .mobile-menu {
-    display: block;
-    height: 100vh;
-    width: 100vh;
-    position: fixed;
-    background-color: white;
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
-  }
-}
-
-@media (max-width: 428px) {
-  .about-item h3 {
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 36px;
-    letter-spacing: 0.72px;
-    line-height: 1.11px;
-  }
-}
-@media (min-width: 767px) {
-  .mobile-nav {
-    display: none;
-  }
-}
-
-@media (max-width: 1200px) {
   .portfolio-btn {
     padding-top: 32px;
   }
@@ -1042,5 +1036,23 @@ footer {
 
   .container {
     top: 10px;
+  }
+  h1 {
+    font-size: 56px;
+    letter-spacing: 1.12px;
+    line-height: 60px;
+  }
+
+  .header.container.d-flex.header {
+    display: inline-flex;
+  }
+
+  .portfolio-contacts {
+    display: flex;
+    gap: 50px;
+  }
+
+  .portfolio-btn {
+    text-align: center;
   }
 }
